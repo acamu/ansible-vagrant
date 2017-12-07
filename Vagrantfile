@@ -31,7 +31,9 @@ end
  #Define a Virtual machine A
   config.vm.define :server do |srv|
     srv.vm.hostname = "nagios-server"
+    # Default shared folder setting
     srv.vm.synced_folder "server/", "/usr/local/nagios/etc", create: true
+    # Forward host's port 8080 to server's port 80
     srv.vm.network "forwarded_port", guest: 80, host: 8080
     srv.vm.provision "shell", path: "server-provision"
   end
