@@ -21,3 +21,10 @@ Vagrant Up
 Vagrant status
 
     $vagrant status
+    
+Vagrant restart
+
+    $vagrant reload
+    
+
+ùù
